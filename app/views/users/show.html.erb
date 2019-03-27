@@ -1,16 +1,12 @@
 <h1>
   <%= @user.username %>
 
- 
-
-<% if @created_events.present? %>
-   <% @created_events.each do |post| %>
-      <%= created_events.title %>
-   <% end %>
-   <% else %>
-   <h1>User has no created_events</h1>
-<% end %>
-</ul>
+ <% if @user.created_events.any? %>
+      <h3>events (<%= @user.created_events.count %>)</h3>
+      <ol class="events">
+        <%= render @events %>
+      </ol>
+    <% end %>
 
 
 
