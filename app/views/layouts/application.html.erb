@@ -8,6 +8,14 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <div class="navBar" id="mainNavBar">
+      <% if logged_in? %>
+   <a href="#">logged in <%= @current_user.username %></a>  
+<% else %>
+<a href=""><%= link_to 'Sign in', login_path %></a>  
+<% end %>
+  <a href="#home">Home</a>
+</div>
 
   <body>
     <%= yield %>
