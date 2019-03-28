@@ -16,6 +16,10 @@
  *= require skeleton
  */
 
+ .container {
+    padding-top: 30px;
+
+ }
 
  
  .navBar{

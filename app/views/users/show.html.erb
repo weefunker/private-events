@@ -1,14 +1,22 @@
-<h1>
-  <%= @user.username %>
+<div class="row">
+  
 
- <% if @user.created_events.any? %>
-      <h3>events (<%= @user.created_events.count %>)</h3>
-      <ol class="events">
-        <%= render @events %>
-      </ol>
-    <% end %>
+<div class="one-third column">&nbsp;</div>
+<div class="one-third column">
+<h4><%= @user.username %> <% if @user.created_events.any? %> events (<%= @user.created_events.count %>)</h4>
+<% end %>
+</div>
+<div class="one-third column">&nbsp;</div>
+</div>
+
+   <% if @user.created_events.any? %>
+    
+        <ol class="events">
+          <%= render @events %>
+        </ol>
+      <% end %>
 
 
 
 
-</h1>
+
