@@ -3,13 +3,13 @@
 
 <div class="one-third column">&nbsp;</div>
 <div class="one-third column">
-<h4><%= @user.username %> <% if @user.created_events.any? %> events (<%= @user.created_events.count %>)</h4>
+<h4><%= @user.username %> <% if @user.events.any? %> events (<%= @user.events.count %>)</h4>
 <% end %>
 </div>
 <div class="one-third column">&nbsp;</div>
 </div>
 
-   <% if @user.created_events.any? %>
+   <% if @user.events.any? %>
     
         <ol class="events">
           <%= render @events %>
