@@ -2,4 +2,12 @@
      <%= link_to @event.creator.username, user_path %> 
     <%= @event.title %>
     <%= @event.details %>
+    
 </h1>
+
+<% unless @event.attendees.blank? %>
+<h2>Users Attending</h2>
+<% @event.attendees.each do |attendee| %>
+<h3><%= attendee.username%></h3>
+    <% end %>
+<% end %>

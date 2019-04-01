@@ -18,5 +18,15 @@
 
 
 
+    
+  <% unless  @user.attended_events.blank? %>
+          <h2><%= @user.username %> attended events</h2>
+          <% @user.events.each do |events| %>
+          <h3><%= events.title %></h3>
+    <% end %>
+<% end %>
+
+
+
 
 
