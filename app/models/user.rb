@@ -8,4 +8,5 @@ class User < ApplicationRecord
     # Only a foreign key and a has many association is needeed, not even a table. 
     # Had to drop the table and redo, just for brevity 
     has_many :events, foreign_key: :creator_id
+    has_many :attended_events, foreign_key: :attendee_id
 end
