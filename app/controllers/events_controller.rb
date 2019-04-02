@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
     def show
-        @event = Event.find(params[:id]).order(created_at: :desc)
+        @event = Event.find(params[:id])
     end
 
     def new
