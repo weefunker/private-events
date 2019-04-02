@@ -1,11 +1,24 @@
 
-<li id="event-<%= event.id %>">
-  <%= link_to event.creator.username, event.creator %>
- <%= link_to event.title, event_path(event.id) %>
- <br>
- <%= event.details %>
- <br>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(event.created_at) %> ago.
-  </span>
-</li>
+<div class="event-box-<%= event.id %>">
+  <li id="event-<%= event.id %>">
+    <h2>
+      <%= link_to event.title, event_path(event.id) %>
+    </h2>
+    <strong>
+    <%= link_to event.creator.username, event.creator %>
+     
+     </strong>
+    
+    
+   <p class="event-details">
+     <%= event.details %>
+   </p>
+  
+   <%= event.date %>
+   
+  
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(event.created_at) %> ago.
+    </span>
+  </li>
+</div>

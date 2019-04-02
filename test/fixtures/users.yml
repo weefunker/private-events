@@ -1,9 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  username: MyString
-  password_digest: MyString
+  username: weefruit  
+  password_digest: chelsea0
 
 two:
-  username: MyString
-  password_digest: MyString
+  username: gimperty
+  password_digest: chelsea0
+
+two:
+  username: sausageman  
+  password_digest: chelsea0
+
+two:
+  username: bandofbobos  
+  password_digest: chelsea0

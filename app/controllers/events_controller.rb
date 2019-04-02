@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
     def show
-        @event = Event.find(params[:id])
+        @event = Event.find(params[:id]).order(created_at: :desc)
     end
 
     def new
@@ -9,7 +9,7 @@ class EventsController < ApplicationController
     end
 
     def create
-        @event = current_user.πevents.build(event_params) if logged_in?
+        @event = current_user.events.build(event_params) if logged_in?
         if @event.save 
             flash[:success] = "Event created!"
             redirect_to current_user
@@ -18,9 +18,12 @@ class EventsController < ApplicationController
         end      
     end
 
-    def index
-        @events = Event.all
+    def index 
+        @events = Event.all.order(created_at: :desc)
+        @past_events = Event.where("date < ? ", Time.now)
+        @future_events = Event.where("date > ? ", Time.now)
     end
+    
     
     
 

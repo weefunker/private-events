@@ -1,9 +1,14 @@
-<%= form_for(@event) do |f| %>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-
-      <%= f.label :details %>
-      <%= f.text_area :details %>
-
-      <%= f.submit "Create event", class: "btn btn-primary" %>
-<% end %>
+<div class="event-form center">
+      <%= form_for(@event) do |f| %>
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+      
+            <%= f.label :details %>
+            <%= f.text_area :details %>
+      
+            <%= f.label :date %>
+            <%= f.date_field  :date %>
+            <br>
+            <%= f.submit "Create event", class: "btn btn-primary" %>
+      <% end %>
+</div>
